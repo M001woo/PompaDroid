@@ -323,7 +323,7 @@ public class Hero : Actor
                     baseAnim.SetInteger("EvaluatedChain", evaluatedAttackChain);
                     baseAnim.SetInteger("CurrentChain", currentAttackChain);
 
-                    body.velocity = Vector3.zero;
+                    body.linearVelocity = Vector3.zero;
                     body.useGravity = false;
                 }
             }
@@ -468,7 +468,7 @@ public class Hero : Actor
             powerupRoot = currentPowerup.rootObject;
             powerup.user = this;
 
-            currentPowerup.body.velocity = Vector3.zero;
+            currentPowerup.body.linearVelocity = Vector3.zero;
             powerupRoot.SetActive(false);
             Walk();
 
